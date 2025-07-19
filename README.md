@@ -1,1 +1,0 @@
-# lorisha-hair-studio
