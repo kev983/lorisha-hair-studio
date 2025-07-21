@@ -39,6 +39,16 @@
 
     <link rel="stylesheet" crossorigin="" href="assets/index-DBt7t9n5.css" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .services-section a {
+        transition: 600ms;
+        border-radius: 20%;
+      }
+      .services-section a:hover {
+        scale: 1.05;
+        box-shadow: 2px 3px 18px #666666;
+      }
+    </style>
   </head>
 
   <body>
@@ -148,11 +158,10 @@
           </div>
         </section>
 
-        <section class="py-20 px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div
-            class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-500 animate-fade-in"
-            style="animation-delay: 0ms"
-          >
+        <section
+          class="services-section py-20 px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <a href="salon-services.html">
             <div
               class="h-80 bg-cover bg-center relative"
               style="
@@ -169,34 +178,9 @@
                 </p>
               </div>
             </div>
-          </div>
-          <div
-            class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-500 animate-fade-in"
-            style="animation-delay: 0ms"
-          >
-            <a href="spa-services.html">
-              <div
-                class="h-80 bg-cover bg-center relative"
-                style="
-                  background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80');
-                "
-              >
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
-                ></div>
-                <div class="absolute bottom-6 left-6 right-6 text-white">
-                  <h3 class="text-2xl font-bold mb-2">Spa Services</h3>
-                  <p class="text-white/90">
-                    Rejuvenating treatments for ultimate relaxation
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div
-            class="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-500 animate-fade-in"
-            style="animation-delay: 0ms"
-          >
+          </a>
+
+          <a href="spa-services.html">
             <div
               class="h-80 bg-cover bg-center relative"
               style="
@@ -207,13 +191,32 @@
                 class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
               ></div>
               <div class="absolute bottom-6 left-6 right-6 text-white">
-                <h3 class="text-2xl font-bold mb-2">Facial Treatments</h3>
+                <h3 class="text-2xl font-bold mb-2">Spa Services</h3>
                 <p class="text-white/90">
-                  Rejuvenating facials for glowing, healthy skin
+                  Rejuvenating treatments for ultimate relaxation
                 </p>
               </div>
             </div>
-          </div>
+          </a>
+
+          <a href="barber-services.html">
+            <div
+              class="h-80 bg-cover bg-center relative"
+              style="
+                background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80');
+              "
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"
+              ></div>
+              <div class="absolute bottom-6 left-6 right-6 text-white">
+                <h3 class="text-2xl font-bold mb-2">Barber Services</h3>
+                <p class="text-white/90">
+                  Perfect cuts for both gents and ladies, we are what you need
+                </p>
+              </div>
+            </div>
+          </a>
         </section>
 
         <section class="py-20 px-6">
