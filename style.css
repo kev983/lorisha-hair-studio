@@ -560,3 +560,74 @@
   font-weight: 800;
   src: url("chrome-extension://gkkdmjjodidppndkbkhhknakbeflbomf/fonts/open_sans/open-sans-v18-latin-800.woff");
 }
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.service {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.service-info {
+  flex: 1 1 60%;
+}
+
+.service h2 {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+  color: #222222;
+  transition: 500ms;
+}
+
+.service p {
+  margin: 0;
+  font-size: 1rem;
+  color: #222222;
+  display: none;
+}
+
+.service:hover h2 {
+  color: rgb(217, 119, 6);
+}
+
+.service-price {
+  flex: 1 1 30%;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-price span {
+  font-size: 1.2rem;
+  color: rgb(217, 119, 6);
+  font-weight: bold;
+}
+
+.service-price strong {
+  font-size: 2rem;
+  color: #222222;
+}
+
+@media (max-width: 600px) {
+  .service {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .service-price {
+    text-align: left;
+    margin-top: 10px;
+  }
+}
