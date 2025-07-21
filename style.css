@@ -636,3 +636,19 @@
     margin-top: 10px;
   }
 }
+
+.ref-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ref-section a {
+  text-decoration: none;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+  box-shadow: 2px 2px 10px rgb(217, 119, 6);
+}
+.ref-section a:hover {
+  color: rgb(217, 119, 6);
+}
