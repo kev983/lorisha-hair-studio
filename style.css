@@ -652,3 +652,28 @@
 .ref-section a:hover {
   color: rgb(217, 119, 6);
 }
+
+.showing {
+  position: absolute;
+  width: 80%;
+  top: 60px;
+  background: whitesmoke;
+  border: 2px solid rgb(217, 119, 6);
+  display: flex;
+  padding: 10px;
+  flex-wrap: wrap;
+  justify-content: left;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.showing a {
+  width: 100%;
+  color: #444;
+  margin: 5px;
+  text-align: left;
+}
+.hidden {
+  width: 30%;
+
+  justify-content: space-between;
+}
