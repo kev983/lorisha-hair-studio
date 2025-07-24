@@ -640,6 +640,7 @@
 .ref-section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .ref-section a {
   text-decoration: none;
