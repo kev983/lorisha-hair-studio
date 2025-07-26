@@ -689,3 +689,6 @@
 
   justify-content: space-between;
 }
+.active {
+  color: rgb(217, 119, 6);
+}
