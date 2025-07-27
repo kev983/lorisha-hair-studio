@@ -14,16 +14,22 @@ window.onload = function () {
   console.log(classNames);
 
   //Handle button click
-  menuBtn.addEventListener("click", () => {
-    if (btn.classList.contains("hidden")) {
-      btn.classList.remove("hidden");
-      btn.classList.add("showing");
-      menuBtn.innerHTML =
-        '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-6 h-6"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>';
-    } else {
-      btn.classList.add("hidden");
-      btn.classList.remove("showing");
-      menuBtn.innerHTML = cancelBtn;
-    }
+  menuBtn.addEventListener("mouseover", () => {
+    btn.classList.remove("hidden");
+    btn.classList.add("showing");
+    menuBtn.innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x w-6 h-6"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>';
+  });
+
+  btn.addEventListener("mouseleave", () => {
+    btn.classList.add("hidden");
+    btn.classList.remove("showing");
+    menuBtn.innerHTML = cancelBtn;
+  });
+
+  window.addEventListener("scroll", function () {
+    btn.classList.add("hidden");
+    btn.classList.remove("showing");
+    menuBtn.innerHTML = cancelBtn;
   });
 };
