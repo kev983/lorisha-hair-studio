@@ -39,6 +39,33 @@
     <script src="assets/index-BEL8UfpT.js"></script>
     <link rel="stylesheet" crossorigin="" href="assets/index-DBt7t9n5.css" />
     <link rel="stylesheet" href="style.css" />
+    <style>
+      #backToTopBtn {
+        /* Fixed position relative to the viewport */
+        position: fixed;
+        bottom: 2rem; /* Distance from the bottom */
+        right: 2rem; /* Distance from the right */
+        z-index: 1000; /* Ensure it stays on top of other content */
+        display: none; /* Hidden by default, shown when scrolled */
+
+        /* Basic button styling with Tailwind overrides for specific properties */
+        background-color: rgb(217, 119, 6);
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions */
+        font-weight: 600; /* Semi-bold */
+      }
+
+      #backToTopBtn:hover {
+        background-color: rgb(217, 119, 6); /* Indigo 700 on hover */
+        transform: translateY(-2px); /* Slight lift on hover */
+      }
+
+      #backToTopBtn:active {
+        transform: translateY(0); /* Reset on click */
+      }
+    </style>
   </head>
 
   <body>
@@ -815,6 +842,13 @@
           </div>
         </section>
 
+        <button
+          id="backToTopBtn"
+          class="p-4 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
+          ↑ Top
+        </button>
+
         <footer id="contact-info" class="bg-stone-800 text-white py-16">
           <div class="max-w-7xl mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
@@ -1012,5 +1046,45 @@
         </footer>
       </div>
     </div>
+    <script>
+      // Get the button element
+      const backToTopBtn = document.getElementById("backToTopBtn");
+
+      // Function to scroll to the top smoothly
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth", // Smooth scrolling animation
+        });
+      }
+
+      // Show or hide the button based on scroll position
+      window.addEventListener("scroll", function () {
+        // If the user has scrolled down more than 300 pixels, show the button
+        if (window.scrollY > 300) {
+          backToTopBtn.style.display = "block";
+          backToTopBtn.style.opacity = "1";
+          backToTopBtn.style.transform = "translateY(0)";
+        } else {
+          // Otherwise, hide it
+          backToTopBtn.style.opacity = "0";
+          backToTopBtn.style.transform =
+            "translateY(10px)"; /* Slight drop effect when hiding */
+          // Use a timeout to hide display: none after the transition
+          setTimeout(() => {
+            if (window.scrollY <= 300) {
+              // Check again in case user scrolled back up quickly
+              backToTopBtn.style.display = "none";
+            }
+          }, 300); // Match transition duration
+        }
+      });
+
+      // Add click event listener to the button
+      backToTopBtn.addEventListener("click", scrollToTop);
+
+      // Initial check for button visibility on page load
+      window.dispatchEvent(new Event("scroll"));
+    </script>
   </body>
 </html>
