@@ -25,9 +25,27 @@ window.onload = function () {
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
   head.appendChild(fontawesome);
 
+  //Change nav background based on scroll position
   var nav = document.getElementsByTagName("nav")[0];
-  var btnDiv = document.getElementsByClassName("md:hidden")[0];
+  var logo = document.getElementsByTagName("span")[0];
+  var svg = document.getElementsByTagName("svg")[0];
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 100) {
+      nav.style.background = "whitesmoke";
+      nav.style.backdropFilter = "10px";
+      menuBtn.style.color = "black";
+      logo.style.color = "black";
+      svg.style.color = "rgb(217, 119, 6)";
+    } else {
+      nav.style.background = "transparent";
+      menuBtn.style.color = "white";
+      logo.style.color = "white";
+      svg.style.color = "white";
+    }
+  });
+
   //Get the menu button from the div
+  var btnDiv = document.getElementsByClassName("md:hidden")[0];
   var menuBtn = btnDiv.children[0];
   var cancelBtn = menuBtn.innerHTML;
   var mobileMenu = document.createElement("div");

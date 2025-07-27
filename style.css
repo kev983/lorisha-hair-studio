@@ -668,7 +668,7 @@
 .showing {
   position: absolute;
   width: 80%;
-  top: 60px;
+  top: 65px;
   background: whitesmoke;
   border: 2px solid rgb(217, 119, 6);
   display: flex;
