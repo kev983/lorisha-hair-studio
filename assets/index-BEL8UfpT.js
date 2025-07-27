@@ -4,7 +4,7 @@ window.onload = function () {
   //Add the whatsapp button
   var whatsappBtn =
     "<a " +
-    'href="https://wa.me/+254710209273" ' +
+    'href="https://wa.me/+254710209273?text=Hi%20I\'d%20like%20to%20book%20an%20appointment" ' +
     'target="_blank" ' +
     'id="whatsappBtn" ' +
     'class="p-4 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 jello-horizontal" ' +
