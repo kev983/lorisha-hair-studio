@@ -692,3 +692,66 @@
 .active {
   color: rgb(217, 119, 6);
 }
+
+/* Custom styles for the WhatsApp button */
+#whatsappBtn {
+  position: fixed;
+  top: 4rem;
+  left: 1rem;
+  z-index: 10;
+  border: 2px solid white;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#whatsappBtn:hover {
+  background-color: #1da851;
+  transform: scale(1.05);
+}
+
+#whatsappBtn:active {
+  transform: scale(1);
+}
+
+.jello-horizontal {
+  -webkit-animation: jello-horizontal 2s both infinite;
+  animation: jello-horizontal 2s both infinite;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    -webkit-transform: scale3d(1.25, 0.75, 1);
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    -webkit-transform: scale3d(0.75, 1.25, 1);
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
