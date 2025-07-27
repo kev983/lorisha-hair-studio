@@ -29,6 +29,9 @@ window.onload = function () {
   var nav = document.getElementsByTagName("nav")[0];
   var logo = document.getElementsByTagName("span")[0];
   var svg = document.getElementsByTagName("svg")[0];
+  var links = document.getElementsByClassName("md:flex")[0];
+  var nodes = links.children;
+
   window.addEventListener("scroll", function () {
     if (window.scrollY > 100) {
       nav.style.background = "whitesmoke";
@@ -36,11 +39,23 @@ window.onload = function () {
       menuBtn.style.color = "black";
       logo.style.color = "black";
       svg.style.color = "rgb(217, 119, 6)";
+      nav.classList.add("shadow-lg");
+      Array.from(nodes).forEach((node) => {
+        if (!node.classList.contains("active")) {
+          node.style.color = "black";
+        }
+      });
     } else {
       nav.style.background = "transparent";
       menuBtn.style.color = "white";
       logo.style.color = "white";
       svg.style.color = "white";
+      nav.classList.remove("shadow-lg");
+      Array.from(nodes).forEach((node) => {
+        if (!node.classList.contains("active")) {
+          node.style.color = "white";
+        }
+      });
     }
   });
 
@@ -48,7 +63,6 @@ window.onload = function () {
   var btnDiv = document.getElementsByClassName("md:hidden")[0];
   var menuBtn = btnDiv.children[0];
   var cancelBtn = menuBtn.innerHTML;
-  var mobileMenu = document.createElement("div");
 
   //Get the menu button and remove all class names excpet hidden
   var btn = document.getElementsByClassName("hidden")[0];
