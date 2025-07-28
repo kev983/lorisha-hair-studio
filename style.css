@@ -667,20 +667,23 @@
 
 .showing {
   position: absolute;
-  width: 80%;
+  width: 200px;
   top: 65px;
-  background: whitesmoke;
+  right: 20px;
+  left: unset;
+  transform: none;
+  background: rgb(182, 179, 179);
   border: 2px solid rgb(217, 119, 6);
   display: flex;
   padding: 10px;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: right;
   flex-direction: column;
   border-radius: 10px;
 }
 .showing a {
   width: 100%;
-  color: #444;
+  color: #292b2b;
   margin: 5px;
   text-align: left;
 }
