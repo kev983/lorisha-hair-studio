@@ -26,38 +26,29 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     #backToTopBtn {
-      /* Fixed position relative to the viewport */
       position: fixed;
       bottom: 2rem;
-      /* Distance from the bottom */
       right: 2rem;
-      /* Distance from the right */
       z-index: 1000;
-      /* Ensure it stays on top of other content */
       display: none;
-      /* Hidden by default, shown when scrolled */
-
-      /* Basic button styling with Tailwind overrides for specific properties */
       background-color: rgb(217, 119, 6);
       color: white;
       border: none;
       cursor: pointer;
       transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-      /* Smooth transitions */
       font-weight: 600;
-      /* Semi-bold */
     }
 
     #backToTopBtn:hover {
       background-color: rgb(217, 119, 6);
-      /* Indigo 700 on hover */
+      
       transform: translateY(-2px);
-      /* Slight lift on hover */
+      
     }
 
     #backToTopBtn:active {
       transform: translateY(0);
-      /* Reset on click */
+      
     }
   </style>
 </head>
@@ -218,7 +209,7 @@
         </div>
       </section>
       <div class="flex flex-col sm:flex-row gap-4 justify-center" style="margin-top: 10px; margin-bottom: -45px">
-        <a href="about.html#appointment"
+        <a href="booking.html"
           class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-11 bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300"><svg
             xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"

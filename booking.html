@@ -24,42 +24,87 @@
   <script src="assets/index-BEL8UfpT.js"></script>
   <link rel="stylesheet" crossorigin="" href="assets/index-DBt7t9n5.css" />
   <link rel="stylesheet" href="style.css" />
+  
   <style>
-    #backToTopBtn {
-      /* Fixed position relative to the viewport */
-      position: fixed;
-      bottom: 2rem;
-      /* Distance from the bottom */
-      right: 2rem;
-      /* Distance from the right */
-      z-index: 1000;
-      /* Ensure it stays on top of other content */
-      display: none;
-      /* Hidden by default, shown when scrolled */
 
-      /* Basic button styling with Tailwind overrides for specific properties */
-      background-color: rgb(217, 119, 6);
-      color: white;
-      border: none;
-      cursor: pointer;
-      transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-      /* Smooth transitions */
-      font-weight: 600;
-      /* Semi-bold */
-    }
+        form {
+        max-width: 600px;
+        margin: auto;
+        background: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        
+        
+      }
 
-    #backToTopBtn:hover {
-      background-color: rgb(217, 119, 6);
-      /* Indigo 700 on hover */
-      transform: translateY(-2px);
-      /* Slight lift on hover */
-    }
+      h2 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    
+      }
 
-    #backToTopBtn:active {
-      transform: translateY(0);
-      /* Reset on click */
-    }
-  </style>
+      label {
+        display: block;
+        margin-top: 1rem;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="datetime-local"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 0.6rem;
+        margin-top: 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        box-sizing: border-box;
+      }
+
+      select[multiple] {
+        height: 120px;
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      .checkbox-group {
+        margin-top: 1rem;
+      }
+
+      .checkbox-group input {
+        margin-right: 0.5rem;
+      }
+
+      .confirmation {
+        margin-top: 1.5rem;
+        font-style: italic;
+        background: #f0f0f0;
+        padding: 1rem;
+        border-radius: 6px;
+      }
+
+      button {
+        margin-top: 1.5rem;
+        width: 100%;
+        padding: 0.8rem;
+        background-color: #d97706;
+        color: white;
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #b45309;
+        
+      }
+    </style>
 </head>
 
 <body>
@@ -70,7 +115,8 @@
       </ol>
     </div>
     <div class="min-h-screen bg-gradient-to-b from-stone-50 to-stone-100">
-      <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+      
+        <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
         <div class="max-w-7xl mx-auto px-6">
           <div class="flex justify-between items-center h-16">
             <a class="flex items-center space-x-2" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="24"
@@ -87,7 +133,7 @@
               <span class="text-2xl font-bold text-white">Lorisha Hair Studio</span></a>
             <div class="hidden md:flex items-center">
               <a class="font-medium transition-colors duration-200 hover:text-amber-600 text-white" href="/">Home</a><a
-                class="font-medium transition-colors duration-200 hover:text-amber-600 text-white active"
+                class="font-medium transition-colors duration-200 hover:text-amber-600 text-white"
                 href="services.html">Services</a><a
                 class="font-medium transition-colors duration-200 hover:text-amber-600 text-white"
                 href="about.html">About</a><a
@@ -108,123 +154,89 @@
           </div>
         </div>
       </nav>
+
+
       <section class="h-96 flex items-center justify-center relative" style="
             background-image: linear-gradient(
                 rgba(0, 0, 0, 0.5),
                 rgba(0, 0, 0, 0.5)
               ),
-              url('images/eyebrow2.jpg');
+              url('images/no.5.jpg');
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
           ">
         <div class="text-center text-white animate-fade-in">
-          <h1 class="text-5xl md:text-6xl font-bold mb-4">Brow Services</h1>
-          <p class="text-xl opacity-90">
-            Enhance your natural beauty with our expert eyebrow shaping and
-            grooming services for a clean, defined, and polished look.
-          </p>
+          <h1 class="text-5xl md:text-6xl font-bold mb-4">Book Your Appointment</h1>
+         
         </div>
       </section>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center" style="margin-top: 10px; margin-bottom: -45px">
-        <a href="booking.html"
-          class="inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-11 bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 text-lg rounded-full transform hover:scale-105 transition-all duration-300"><svg
-            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="lucide lucide-calendar w-5 h-5 mr-2">
-            <path d="M8 2v4"></path>
-            <path d="M16 2v4"></path>
-            <rect width="18" height="18" x="3" y="4" rx="2"></rect>
-            <path d="M3 10h18"></path>
-          </svg>
-          Book Appointment</a>
+      
+      <section class="form" style="background: url('images/Massage1.jpg'); background-position: center center; background-attachment: fixed; background-size: cover; ">
+
+
+        <form id="bookingForm">
+      <h2>Book Your Appointment</h2>
+
+      <label for="firstName">First Name *</label>
+      <input type="text" id="firstName" name="first_name" required />
+
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="last_name" />
+
+      <label for="tel">Phone Number *</label>
+      <input type="tel" id="tel" name="telephone" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="services"
+        >Select Service(s) * <br />
+        (If on PC, <br />
+        please hold ctrl or cmd to have multiple selections)</label
+      >
+      <select id="services" name="services[]" multiple required>
+        <option value="manicure">Manicure</option>
+        <option value="pedicure">Pedicure</option>
+        <option value="facial">Facial</option>
+        <option value="massage">Massage</option>
+        <option value="waxing">Waxing</option>
+        <option value="eyebrow-shaping">Eyebrow Shaping</option>
+        <option value="hair-treatment">Hair Treatment</option>
+      </select>
+
+      <label for="message">Message / Special Request</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="4"
+        placeholder="Any special request or notes..."
+      ></textarea>
+
+      <label for="datetime">Preferred Date & Time *</label>
+      <input
+        type="datetime-local"
+        id="datetime"
+        name="appointment_datetime"
+        required
+      />
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="consent" name="consent" required />
+        <label style="display: inline;" for="consent">I consent to have this website store the above information to respond to my appointment.</label>
       </div>
 
-      <section class="py-20 px-6">
-        <div class="service-list" style="margin: 0; font-family: 'Georgia', serif; padding: 20px">
-          <div class="service">
-            <div class="service-info">
-              <h2>Trimming</h2>
-              <p>
-                Professional styling for all hair types with expert techniques
-                and premium products. Includes consultation, deep cleansing,
-                styling, and aftercare recommendations.
-              </p>
-            </div>
-            <div class="service-price">
-              <span>KSh</span>
-              <strong>150</strong>
-            </div>
-          </div>
-          <hr />
+      <div class="confirmation">
+        Please confirm that all details above are correct. This information will
+        be used to contact you regarding your appointment.
+      </div>
 
-          <div class="service">
-            <div class="service-info">
-              <h2>Threading</h2>
-              <p>
-                Hand-painted highlights for a natural, sun-kissed look that
-                enhances your features. Includes color consultation, premium
-                balayage technique, and toning treatment.
-              </p>
-            </div>
-            <div class="service-price">
-              <span>KSh</span>
-              <strong>200</strong>
-            </div>
-          </div>
-          <hr />
+      <button id="submit" type="submit">Confirm & Book Appointment</button>
+    </form>
 
-          <div class="service">
-            <div class="service-info">
-              <h2>Tweezing</h2>
-              <p>
-                Specialized care for natural African hair textures using
-                Mizani professional products. Includes hair analysis,
-                treatment, conditioning, and styling.
-              </p>
-            </div>
-            <div class="service-price">
-              <span>KSh</span>
-              <strong>200</strong>
-            </div>
-          </div>
-          <hr />
-          <div class="service">
-            <div class="service-info">
-              <h2>Trimming + Tinting</h2>
-              <p>
-                Specialized care for natural African hair textures using
-                Mizani professional products. Includes hair analysis,
-                treatment, conditioning, and styling.
-              </p>
-            </div>
-            <div class="service-price">
-              <span>KSh</span>
-              <strong>500</strong>
-            </div>
-          </div>
-          <hr />
-          <div class="service">
-            <div class="service-info">
-              <h2>Select Accompaniment</h2>
-              <p>
-                Specialized care for natural African hair textures using
-                Mizani professional products. Includes hair analysis,
-                treatment, conditioning, and styling.
-              </p>
-            </div>
-            <div class="service-price">
-              <span>KSh</span>
-              <strong>200</strong>
-            </div>
-          </div>
-          <hr />
-        </div>
+
       </section>
-      <button id="backToTopBtn"
-        class="p-4 rounded-full shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-        ↑ Top
-      </button>
+
       <footer id="contact-info" class="bg-stone-800 text-white py-16">
         <div class="max-w-7xl mx-auto px-6">
           <div class="grid md:grid-cols-4 gap-8">
@@ -335,45 +347,65 @@
     </div>
   </div>
   <script>
-    // Get the button element
-    const backToTopBtn = document.getElementById("backToTopBtn");
+  document.querySelector("form").addEventListener("submit", function (e) {
+    const datetimeInput = document.getElementById("datetime");
+    const selected = new Date(datetimeInput.value);
+    const now = new Date();
 
-    // Function to scroll to the top smoothly
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth", // Smooth scrolling animation
-      });
+    // Check for past dates
+    if (selected < now) {
+      alert("You cannot book an appointment in the past.");
+      e.preventDefault();
+      return;
     }
 
-    // Show or hide the button based on scroll position
-    window.addEventListener("scroll", function () {
-      // If the user has scrolled down more than 300 pixels, show the button
-      if (window.scrollY > 300) {
-        backToTopBtn.style.display = "block";
-        backToTopBtn.style.opacity = "1";
-        backToTopBtn.style.transform = "translateY(0)";
-      } else {
-        // Otherwise, hide it
-        backToTopBtn.style.opacity = "0";
-        backToTopBtn.style.transform =
-          "translateY(10px)"; /* Slight drop effect when hiding */
-        // Use a timeout to hide display: none after the transition
-        setTimeout(() => {
-          if (window.scrollY <= 300) {
-            // Check again in case user scrolled back up quickly
-            backToTopBtn.style.display = "none";
-          }
-        }, 300); // Match transition duration
-      }
-    });
+    // Check for more than 3 months ahead
+    const threeMonthsFromNow = new Date();
+    threeMonthsFromNow.setMonth(threeMonthsFromNow.getMonth() + 3);
+    if (selected > threeMonthsFromNow) {
+      alert("You cannot book more than 3 months in advance.");
+      e.preventDefault();
+      return;
+    }
 
-    // Add click event listener to the button
-    backToTopBtn.addEventListener("click", scrollToTop);
+    const day = selected.getDay(); // 0 = Sunday, 6 = Saturday
+    const hours = selected.getHours();
+    const minutes = selected.getMinutes();
 
-    // Initial check for button visibility on page load
-    window.dispatchEvent(new Event("scroll"));
-  </script>
+    let openingHour, openingMin, closingHour, closingMin;
+
+    if (day >= 1 && day <= 5) {
+      // Mon-Fri
+      openingHour = 8;
+      openingMin = 30;
+      closingHour = 19;
+      closingMin = 0;
+    } else if (day === 6) {
+      // Saturday
+      openingHour = 8;
+      openingMin = 30;
+      closingHour = 18;
+      closingMin = 0;
+    } else {
+      // Sunday
+      openingHour = 10;
+      openingMin = 30;
+      closingHour = 18;
+      closingMin = 0;
+    }
+
+    const selectedMinutes = hours * 60 + minutes;
+    const openMinutes = openingHour * 60 + openingMin;
+    const closeMinutes = closingHour * 60 + closingMin;
+
+    if (selectedMinutes < openMinutes || selectedMinutes > closeMinutes) {
+      alert(`On ${["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][day]}, appointments must be between ${openingHour}:${openingMin.toString().padStart(2,'0')} and ${closingHour}:${closingMin.toString().padStart(2,'0')}.`);
+      e.preventDefault();
+      return;
+    }
+  });
+</script>
+
 </body>
 
 </html>

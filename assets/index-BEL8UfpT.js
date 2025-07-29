@@ -54,6 +54,8 @@ window.onload = function () {
       Array.from(nodes).forEach((node) => {
         if (!node.classList.contains("active")) {
           node.style.color = "white";
+        } else {
+          node.style.color = "rgb(217, 119, 6)";
         }
       });
     }
