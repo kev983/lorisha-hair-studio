@@ -24,87 +24,117 @@
   <script src="assets/index-BEL8UfpT.js"></script>
   <link rel="stylesheet" crossorigin="" href="assets/index-DBt7t9n5.css" />
   <link rel="stylesheet" href="style.css" />
-  
+
   <style>
+    .form {
+      position: relative;
 
-        form {
-        max-width: 600px;
-        margin: auto;
-        background: #fff;
-        padding: 2rem;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-        
-        
-      }
+      overflow: hidden;
 
-      h2 {
-        text-align: center;
-        margin-bottom: 1.5rem;
-    
-      }
+      z-index: 1;
 
-      label {
-        display: block;
-        margin-top: 1rem;
-        font-weight: bold;
-      }
 
-      input[type="text"],
-      input[type="tel"],
-      input[type="email"],
-      input[type="datetime-local"],
-      select,
-      textarea {
-        width: 100%;
-        padding: 0.6rem;
-        margin-top: 0.5rem;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        box-sizing: border-box;
-      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
 
-      select[multiple] {
-        height: 120px;
-      }
+    .form::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('images/Massage1.jpg') center center/cover no-repeat;
+      background-attachment: fixed;
+      filter: blur(5px);
+      -webkit-filter: blur(5px);
+      z-index: -1;
+      transform: scale(1.02);
+    }
 
-      textarea {
-        resize: vertical;
-      }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      position: relative;
+      z-index: 2;
 
-      .checkbox-group {
-        margin-top: 1rem;
-      }
+    }
 
-      .checkbox-group input {
-        margin-right: 0.5rem;
-      }
+    h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
 
-      .confirmation {
-        margin-top: 1.5rem;
-        font-style: italic;
-        background: #f0f0f0;
-        padding: 1rem;
-        border-radius: 6px;
-      }
+    }
 
-      button {
-        margin-top: 1.5rem;
-        width: 100%;
-        padding: 0.8rem;
-        background-color: #d97706;
-        color: white;
-        font-size: 1rem;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-      }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
 
-      button:hover {
-        background-color: #b45309;
-        
-      }
-    </style>
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="datetime-local"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    select[multiple] {
+      height: 120px;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .checkbox-group {
+      margin-top: 1rem;
+    }
+
+    .checkbox-group input {
+      margin-right: 0.5rem;
+    }
+
+    .confirmation {
+      margin-top: 1.5rem;
+      font-style: italic;
+      background: #f0f0f0;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      padding: 0.8rem;
+      background-color: #d97706;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b45309;
+
+    }
+  </style>
 </head>
 
 <body>
@@ -115,8 +145,8 @@
       </ol>
     </div>
     <div class="min-h-screen bg-gradient-to-b from-stone-50 to-stone-100">
-      
-        <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
+
+      <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent">
         <div class="max-w-7xl mx-auto px-6">
           <div class="flex justify-between items-center h-16">
             <a class="flex items-center space-x-2" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="24"
@@ -168,81 +198,67 @@
           ">
         <div class="text-center text-white animate-fade-in">
           <h1 class="text-5xl md:text-6xl font-bold mb-4">Book Your Appointment</h1>
-         
+
         </div>
       </section>
-      
-      <section class="form" style="background: url('images/Massage1.jpg'); background-position: center center; background-attachment: fixed; background-size: cover; display: flex; justify-content: center; align-items: center;">
+
+      <section class="form"
+        style="background: url('images/Massage1.jpg'); background-position: center center; background-attachment: fixed; background-size: cover; display: flex; justify-content: center; align-items: center;">
 
 
         <form id="bookingForm">
-      <h2>Book Your Appointment</h2>
+          <h2>Book Your Appointment</h2>
 
-      <label for="firstName">First Name *</label>
-      <input type="text" id="firstName" name="first_name" required />
+          <label for="firstName">First Name *</label>
+          <input type="text" id="firstName" name="first_name" required />
 
-      <label for="lastName">Last Name</label>
-      <input type="text" id="lastName" name="last_name" />
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="last_name" />
 
-      <label for="tel">Phone Number *</label>
-      <input type="tel" id="tel" name="telephone" required />
+          <label for="tel">Phone Number *</label>
+          <input type="tel" id="tel" name="telephone" required />
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" />
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" />
 
-      <label for="services"
-        >Select Service(s) * <br />
-        (If on PC, <br />
-        please hold ctrl or cmd to have multiple selections)</label
-      >
-      <select id="services" name="services[]" multiple required>
-        <option value="salon">Salon</option>
-        <option value="spa">Spa</option>
-        <option value="barber">Barber</option>
-        <option value="nails">Nails</option>
-        <option value="waxing">Waxing</option>
-        <option value="eyebrow-shaping">Eyebrow Services</option>
-        <option value="treatment">Treatments</option>
-      </select>
+          <label for="services">Select Service(s) * <br />
+            (If on PC, <br />
+            please hold ctrl or cmd to have multiple selections)</label>
+          <select id="services" name="services[]" multiple required>
+            <option value="salon">Salon</option>
+            <option value="spa">Spa</option>
+            <option value="barber">Barber</option>
+            <option value="nails">Nails</option>
+            <option value="waxing">Waxing</option>
+            <option value="eyebrow-shaping">Eyebrow Services</option>
+            <option value="treatment">Treatments</option>
+          </select>
 
-      <label for="service-to-offer">What service would you like?</label>
-      <textarea
-        id="service-to-offer"
-        name="service-to-offer"
-        rows="4"
-        placeholder="Please type the servive you would like."
-        required
-      ></textarea>
+          <label for="service-to-offer">What service would you like?</label>
+          <textarea id="service-to-offer" name="service-to-offer" rows="4"
+            placeholder="Please type the servive you would like." required></textarea>
 
-      <label for="message">Message / Special Request</label>
-      <textarea
-        id="message"
-        name="message"
-        rows="4"
-        placeholder="Any special request or message..."
-      ></textarea>
+          <label for="message">Message / Special Request</label>
+          <textarea id="message" name="message" rows="4" placeholder="Any special request or message..."></textarea>
 
-      <label for="datetime">Preferred Date & Time *</label>
-      <input
-        type="datetime-local"
-        id="datetime"
-        name="appointment_datetime"
-        required
-      />
+          <label for="datetime">Preferred Date & Time *</label>
+          <input type="datetime-local" id="datetime" name="appointment_datetime" required />
 
-      <div class="checkbox-group">
-        <input type="checkbox" id="consent" name="consent" required />
-        <label style="display: inline;" for="consent">I consent to have this website store the above information to respond to my appointment.</label>
-      </div>
+          <div class="checkbox-group">
+            <input type="checkbox" id="consent" name="consent" required />
+            <label style="display: inline;" for="consent">I consent to have this website store the above information to
+              respond to my appointment.</label>
+          </div>
 
-      <div class="confirmation">
-        Please confirm that all details above are correct. This information will
-        be used to contact you regarding your appointment. <br>
-        For further enquiries please contact us <a href="about.html#contact-info" style="color: blue; text-decoration: underline;">here</a>.
-      </div>
+          <div class="confirmation">
+            Please confirm that all details above are correct. This information will
+            be used to contact you regarding your appointment. <br>
+            For further enquiries please contact us <a href="about.html#contact-info"
+              style="color: blue; text-decoration: underline;">here</a>.
+          </div>
 
-      <button id="submit" type="submit">Confirm & Book Appointment</button>
-    </form>
+          <button id="submit" type="submit">Confirm & Book Appointment</button>
+        </form>
 
 
       </section>
@@ -313,7 +329,7 @@
               <div class="space-y-2">
                 <a href="services.html" class="block hover:text-amber-400 transition-colors">Services</a><a
                   href="about.html" class="block hover:text-amber-400 transition-colors">About Us</a>
-                  <a href="privacy-policy.html" class="block hover:text-amber-400 transition-colors">Privacy Policy</a>
+                <a href="privacy-policy.html" class="block hover:text-amber-400 transition-colors">Privacy Policy</a>
               </div>
             </div>
             <div class="space-y-4">
@@ -358,64 +374,64 @@
     </div>
   </div>
   <script>
-  document.querySelector("form").addEventListener("submit", function (e) {
-    const datetimeInput = document.getElementById("datetime");
-    const selected = new Date(datetimeInput.value);
-    const now = new Date();
+    document.querySelector("form").addEventListener("submit", function (e) {
+      const datetimeInput = document.getElementById("datetime");
+      const selected = new Date(datetimeInput.value);
+      const now = new Date();
 
-    // Check for past dates
-    if (selected < now) {
-      alert("You cannot book an appointment in the past.");
-      e.preventDefault();
-      return;
-    }
+      // Check for past dates
+      if (selected < now) {
+        alert("You cannot book an appointment in the past.");
+        e.preventDefault();
+        return;
+      }
 
-    // Check for more than 3 months ahead
-    const threeMonthsFromNow = new Date();
-    threeMonthsFromNow.setMonth(threeMonthsFromNow.getMonth() + 3);
-    if (selected > threeMonthsFromNow) {
-      alert("You cannot book more than 3 months in advance.");
-      e.preventDefault();
-      return;
-    }
+      // Check for more than 3 months ahead
+      const threeMonthsFromNow = new Date();
+      threeMonthsFromNow.setMonth(threeMonthsFromNow.getMonth() + 3);
+      if (selected > threeMonthsFromNow) {
+        alert("You cannot book more than 3 months in advance.");
+        e.preventDefault();
+        return;
+      }
 
-    const day = selected.getDay(); // 0 = Sunday, 6 = Saturday
-    const hours = selected.getHours();
-    const minutes = selected.getMinutes();
+      const day = selected.getDay(); // 0 = Sunday, 6 = Saturday
+      const hours = selected.getHours();
+      const minutes = selected.getMinutes();
 
-    let openingHour, openingMin, closingHour, closingMin;
+      let openingHour, openingMin, closingHour, closingMin;
 
-    if (day >= 1 && day <= 5) {
-      // Mon-Fri
-      openingHour = 8;
-      openingMin = 30;
-      closingHour = 19;
-      closingMin = 0;
-    } else if (day === 6) {
-      // Saturday
-      openingHour = 8;
-      openingMin = 30;
-      closingHour = 18;
-      closingMin = 0;
-    } else {
-      // Sunday
-      openingHour = 10;
-      openingMin = 30;
-      closingHour = 18;
-      closingMin = 0;
-    }
+      if (day >= 1 && day <= 5) {
+        // Mon-Fri
+        openingHour = 8;
+        openingMin = 30;
+        closingHour = 19;
+        closingMin = 0;
+      } else if (day === 6) {
+        // Saturday
+        openingHour = 8;
+        openingMin = 30;
+        closingHour = 18;
+        closingMin = 0;
+      } else {
+        // Sunday
+        openingHour = 10;
+        openingMin = 30;
+        closingHour = 18;
+        closingMin = 0;
+      }
 
-    const selectedMinutes = hours * 60 + minutes;
-    const openMinutes = openingHour * 60 + openingMin;
-    const closeMinutes = closingHour * 60 + closingMin;
+      const selectedMinutes = hours * 60 + minutes;
+      const openMinutes = openingHour * 60 + openingMin;
+      const closeMinutes = closingHour * 60 + closingMin;
 
-    if (selectedMinutes < openMinutes || selectedMinutes > closeMinutes) {
-      alert(`On ${["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][day]}, appointments must be between ${openingHour}:${openingMin.toString().padStart(2,'0')} and ${closingHour}:${closingMin.toString().padStart(2,'0')}.`);
-      e.preventDefault();
-      return;
-    }
-  });
-</script>
+      if (selectedMinutes < openMinutes || selectedMinutes > closeMinutes) {
+        alert(`On ${["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][day]}, appointments must be between ${openingHour}:${openingMin.toString().padStart(2, '0')} and ${closingHour}:${closingMin.toString().padStart(2, '0')}.`);
+        e.preventDefault();
+        return;
+      }
+    });
+  </script>
 
 </body>
 
