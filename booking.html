@@ -172,7 +172,7 @@
         </div>
       </section>
       
-      <section class="form" style="background: url('images/Massage1.jpg'); background-position: center center; background-attachment: fixed; background-size: cover; ">
+      <section class="form" style="background: url('images/Massage1.jpg'); background-position: center center; background-attachment: fixed; background-size: cover; display: flex; justify-content: center; align-items: center;">
 
 
         <form id="bookingForm">
@@ -196,21 +196,30 @@
         please hold ctrl or cmd to have multiple selections)</label
       >
       <select id="services" name="services[]" multiple required>
-        <option value="manicure">Manicure</option>
-        <option value="pedicure">Pedicure</option>
-        <option value="facial">Facial</option>
-        <option value="massage">Massage</option>
+        <option value="salon">Salon</option>
+        <option value="spa">Spa</option>
+        <option value="barber">Barber</option>
+        <option value="nails">Nails</option>
         <option value="waxing">Waxing</option>
-        <option value="eyebrow-shaping">Eyebrow Shaping</option>
-        <option value="hair-treatment">Hair Treatment</option>
+        <option value="eyebrow-shaping">Eyebrow Services</option>
+        <option value="treatment">Treatments</option>
       </select>
+
+      <label for="service-to-offer">What service would you like?</label>
+      <textarea
+        id="service-to-offer"
+        name="service-to-offer"
+        rows="4"
+        placeholder="Please type the servive you would like."
+        required
+      ></textarea>
 
       <label for="message">Message / Special Request</label>
       <textarea
         id="message"
         name="message"
         rows="4"
-        placeholder="Any special request or notes..."
+        placeholder="Any special request or message..."
       ></textarea>
 
       <label for="datetime">Preferred Date & Time *</label>
@@ -228,7 +237,8 @@
 
       <div class="confirmation">
         Please confirm that all details above are correct. This information will
-        be used to contact you regarding your appointment.
+        be used to contact you regarding your appointment. <br>
+        For further enquiries please contact us <a href="about.html#contact-info" style="color: blue; text-decoration: underline;">here</a>.
       </div>
 
       <button id="submit" type="submit">Confirm & Book Appointment</button>
