@@ -572,7 +572,9 @@
       rgba(255, 255, 255, 0.6),
       rgba(255, 255, 255, 0.6)
     ),
-    url("images/Backmassage5.jpg") center center/cover no-repeat;
+    url("images/Backmassage5.jpg");
+  background-position: center center;
+  background-attachment: fixed;
   border-radius: 0;
   padding: 0;
   backdrop-filter: blur(8px);
