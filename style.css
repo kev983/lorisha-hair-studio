@@ -1,3 +1,23 @@
+/* Custom font definitions for Playfair Display and Lato */
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", serif;
+}
+
+/* Use !important to override default styles from the Tailwind CSS framework */
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif !important;
+}
 :where(html[dir="ltr"]),
 :where([data-sonner-toaster][dir="ltr"]) {
   --toast-icon-margin-start: -3px;
@@ -520,9 +540,10 @@
   }
 }
 @media (prefers-reduced-motion) {
-  [data-sonner-toast],
-  [data-sonner-toast] > *,
-  .sonner-loading-bar {
+  /* ... keep your other elements here ... */
+  #whatsappBtn,
+  #animateSection,
+  #animateSection.animate-on-scroll {
     transition: none !important;
     animation: none !important;
   }
@@ -712,6 +733,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: jello-horizontal 2s both infinite;
+  padding: 10px 15px;
+  border-radius: 30px;
 }
 
 #whatsappBtn:hover {
@@ -723,38 +748,66 @@
   transform: scale(1);
 }
 
-.jello-horizontal {
-  -webkit-animation: jello-horizontal 2s both infinite;
-  animation: jello-horizontal 2s both infinite;
-}
-
-@keyframes jello-horizontal {
+/* New keyframe animations for sliding in */
+/* Custom Keyframes for Slide-In Animations */
+@keyframes slide-in-left {
   0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
-  }
-  40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
-  }
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
+    transform: translateX(-100%);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    transform: translateX(0);
+    opacity: 1;
   }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Base Styles & Initial State (Hidden) */
+#animateSection {
+  opacity: 0;
+  transition: none; /* Prevents initial flash */
+}
+
+/* Styles for the Image */
+#animateImage {
+  transform: translateX(-100%); /* Initial off-screen position */
+  opacity: 0;
+  /* This creates the oval shape */
+  border-radius: 50% / 40%;
+  overflow: hidden;
+  max-width: 400px;
+}
+
+/* Styles for the Text Content */
+#animateContent {
+  transform: translateX(100%); /* Initial off-screen position */
+  opacity: 0;
+}
+
+/* Final State (Visible) - Triggered by the JavaScript */
+#animateSection.animate-on-scroll {
+  opacity: 1;
+  transition: opacity 0.8s ease-out; /* Main section fades in */
+}
+
+#animateSection.animate-on-scroll #animateImage {
+  animation: slide-in-left 1s ease-out forwards;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#animateSection.animate-on-scroll #animateContent {
+  animation: slide-in-right 1s ease-out 0.3s forwards; /* 0.3s delay */
+  opacity: 1;
+  transform: translateX(0);
 }
