@@ -1,7 +1,7 @@
 /*
-	Multiverse by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Multiverse by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 (function ($) {
@@ -210,37 +210,20 @@
       $body.removeClass("modal-active");
     },
     onPopupOpen: function () {
-      $body.addClass("modal-active");
-    },
-    overlayOpacity: 0,
-    popupCloserText: "",
-    popupHeight: 150,
-    popupLoaderText: "",
-    popupSpeed: 300,
-    popupWidth: 150,
-    selector: ".thumb > a.image",
-    usePopupCaption: true,
-    usePopupCloser: true,
-    usePopupDefaultStyling: false,
-    usePopupForceClose: true,
-    usePopupLoader: true,
-    usePopupNav: true,
-    // Add custom functionality for touch devices
-    onPopupOpen: function () {
       // Original onPopupOpen function
       $body.addClass("modal-active");
 
-      // Custom code for touch navigation
+      // Custom code for tap-to-navigate on touch devices
       if (browser.mobile) {
-        // Find the main popup image element
-        var $popupImage = $("#poptrox-popup .pic");
+        // Find the main popup container element
+        var $popupContainer = $(".poptrox-popup");
 
         // Check if a click listener is already attached to avoid multiple bindings
-        if (!$popupImage.data("click-handler-attached")) {
-          $popupImage.data("click-handler-attached", true);
+        if (!$popupContainer.data("click-handler-attached")) {
+          $popupContainer.data("click-handler-attached", true);
 
           // Add a click handler to the image
-          $popupImage.on("click", function (e) {
+          $popupContainer.on("click", function (e) {
             // Prevent the default behavior of closing the popup on a tap
             e.stopPropagation();
 
@@ -265,6 +248,19 @@
         }
       }
     },
+    overlayOpacity: 0,
+    popupCloserText: "",
+    popupHeight: 150,
+    popupLoaderText: "",
+    popupSpeed: 300,
+    popupWidth: 150,
+    selector: ".thumb > a.image",
+    usePopupCaption: true,
+    usePopupCloser: true,
+    usePopupDefaultStyling: false,
+    usePopupForceClose: true,
+    usePopupLoader: true,
+    usePopupNav: true,
     windowMargin: 50,
   });
 
