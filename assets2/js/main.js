@@ -225,6 +225,46 @@
     usePopupForceClose: true,
     usePopupLoader: true,
     usePopupNav: true,
+    // Add custom functionality for touch devices
+    onPopupOpen: function () {
+      // Original onPopupOpen function
+      $body.addClass("modal-active");
+
+      // Custom code for touch navigation
+      if (browser.mobile) {
+        // Find the main popup image element
+        var $popupImage = $("#poptrox-popup .pic");
+
+        // Check if a click listener is already attached to avoid multiple bindings
+        if (!$popupImage.data("click-handler-attached")) {
+          $popupImage.data("click-handler-attached", true);
+
+          // Add a click handler to the image
+          $popupImage.on("click", function (e) {
+            // Prevent the default behavior of closing the popup on a tap
+            e.stopPropagation();
+
+            var $this = $(this);
+            var imageWidth = $this.width();
+            var clickX = e.pageX - $this.offset().left;
+            var nextButton = $(".poptrox-next");
+            var prevButton = $(".poptrox-prev");
+
+            // Check if the click was on the right half of the image
+            if (clickX > imageWidth / 2) {
+              if (nextButton.length) {
+                nextButton.trigger("click");
+              }
+            } else {
+              // Otherwise, go to the previous image
+              if (prevButton.length) {
+                prevButton.trigger("click");
+              }
+            }
+          });
+        }
+      }
+    },
     windowMargin: 50,
   });
 
