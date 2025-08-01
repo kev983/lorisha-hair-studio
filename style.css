@@ -817,3 +817,10 @@ h3 {
   text-align: center;
   margin-top: 20px;
 }
+
+@media (max-width: 768px) {
+  .mobile-screen {
+    background-attachment: scroll !important;
+    background-position: center bottom !important;
+  }
+}
