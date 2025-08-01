@@ -703,6 +703,7 @@ h3 {
   justify-content: right;
   flex-direction: column;
   border-radius: 10px;
+  color: #000;
 }
 .showing a {
   width: 100%;
