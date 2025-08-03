@@ -703,6 +703,7 @@ h3 {
   justify-content: right;
   flex-direction: column;
   border-radius: 10px;
+  color: #000;
 }
 .showing a {
   width: 100%;
@@ -815,4 +816,11 @@ h3 {
   font-weight: 600;
   text-align: center;
   margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .mobile-screen {
+    background-attachment: scroll !important;
+    background-position: center bottom !important;
+  }
 }

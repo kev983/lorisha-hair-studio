@@ -25,6 +25,14 @@ window.onload = function () {
     "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css";
   head.appendChild(fontawesome);
 
+  //Get the menu button from the div
+  var btnDiv = document.getElementsByClassName("md:hidden")[0];
+  var menuBtn = btnDiv.children[0];
+  var cancelBtn = menuBtn.innerHTML;
+
+  //Get the menu button and remove all class names excpet hidden
+  var btn = document.getElementsByClassName("hidden")[0];
+
   //Change nav background based on scroll position
   var nav = document.getElementsByTagName("nav")[0];
   var logo = document.getElementsByTagName("span")[0];
@@ -53,22 +61,17 @@ window.onload = function () {
       nav.classList.remove("shadow-lg");
       Array.from(nodes).forEach((node) => {
         if (!node.classList.contains("active")) {
-          node.style.color = "white";
+          if (!isElementVisible(btn)) {
+            node.style.color = "black";
+          } else {
+            node.style.color = "white";
+          }
         } else {
           node.style.color = "rgb(217, 119, 6)";
         }
       });
     }
   });
-
-  //Get the menu button from the div
-  var btnDiv = document.getElementsByClassName("md:hidden")[0];
-  var menuBtn = btnDiv.children[0];
-  var cancelBtn = menuBtn.innerHTML;
-
-  //Get the menu button and remove all class names excpet hidden
-  var btn = document.getElementsByClassName("hidden")[0];
-  var classNames = btn.className.split(" ");
 
   //Handle button click
   menuBtn.addEventListener("mouseover", () => {
@@ -97,4 +100,12 @@ window.onload = function () {
     btn.classList.remove("showing");
     menuBtn.innerHTML = cancelBtn;
   });
+
+  function isElementVisible(element) {
+    return (
+      element.offsetWidth > 0 &&
+      element.offsetHeight > 0 &&
+      element.getClientRects().length > 0
+    );
+  }
 };
